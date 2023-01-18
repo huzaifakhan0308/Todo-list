@@ -48,11 +48,10 @@ section form {
 }
 
 section form .add-list-input {
-    border: none;
-    width: 98%;
-    outline: none;
-    padding: 15px 10px 15px 10px;
-    background-color: none;
+  border: none;
+  width: 98%;
+  outline: none;
+  padding: 15px 10px 15px 10px;
 }
 
 section .clear-all-btn {

@@ -23,11 +23,19 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-HTML | SCSS | JS | GIT
+HTML | SCSS | JS | ES6 | Webpack
+
+### Key Features <a name="key-features"></a>
+
+- **Display the tasks**
+- **Can add and delete tasks**
+- **Stores data in local storage**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://huzaifakhan0308.github.io/Todo-list/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -67,7 +75,6 @@ To run the project, open index.html with your preferred web browser or open it w
 Feel free to check [issues page]().
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
 
 
 Thanks Microverse, learn how to code > [Join Microverse](https://www.microverse.org/?grsf=9m3hq6)

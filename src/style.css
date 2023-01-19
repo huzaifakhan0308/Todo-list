@@ -7,6 +7,10 @@
   margin: 0;
 }
 
+img {
+  display: flex;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -30,13 +34,17 @@ section .header-div {
   width: 100%;
 }
 
-section header {
+section .header-div header {
   padding: 15px;
 }
 
 section div .refresh {
-  width: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
+  cursor: pointer;
+  opacity: 50%;
 }
 
 section form {
@@ -53,6 +61,16 @@ section form .add-list-input {
   width: 98%;
   outline: none;
   padding: 15px 10px 15px 10px;
+}
+
+section form .add-newlist-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  height: 100%;
+  cursor: pointer;
+  opacity: 50%;
 }
 
 section .clear-all-btn {

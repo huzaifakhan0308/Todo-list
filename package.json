@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/huzaifakhan0308/Todo-list#readme",
   "devDependencies": {
+    "@eslint/eslintrc": "^1.4.1",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",

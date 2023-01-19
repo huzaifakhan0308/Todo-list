@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
-import _ from 'lodash';
 import './style.css';
+import Obj from './modules/obj.js';
+import Newlist from './modules/newList.js';
+import variables from './modules/variables.js';
+import RefreshIcon from './assets/icons/refresh-ccw.svg';
+import ArrowIcon from './assets/icons/corner-down-left.svg';
 
-class NewList {
-  constructor(NewValue, index) {
-    this.inputValue = NewValue;
-    this.indexNumber = index;
-    this.completed = true;
-  }
-}
-
-const Array = [];
+variables.RefreshIcon.src = RefreshIcon;
+variables.AddNewListIcon.src = ArrowIcon;
+document.querySelector('.add-newlist-icon').addEventListener('click', (() => {
+  const newList = new Newlist();
+  newList.add(Obj);
+}));

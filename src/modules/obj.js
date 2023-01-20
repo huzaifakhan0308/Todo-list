@@ -1,7 +1,9 @@
-export default class Obj {
-  constructor(NewValue, index) {
-    this.inputValue = NewValue;
-    this.indexNumber = index;
-    this.completed = true;
+class Obj {
+  constructor(value) {
+    this.inputValue = value;
+    this.index = 0;
+    this.completed = false;
   }
 }
+
+export default Obj;

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Poppins&display=swap");
+
+* {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: flex;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 70vh;
+  margin-top: 20vh;
+}
+
+section .header-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.197);
+  width: 100%;
+}
+
+section .header-div header {
+  padding: 15px;
+}
+
+section div .refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  opacity: 50%;
+}
+
+section form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.197);
+}
+
+section form .add-list-input {
+  border: none;
+  width: 98%;
+  outline: none;
+  padding: 15px 10px 15px 10px;
+}
+
+section form .add-newlist-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  height: 100%;
+  cursor: pointer;
+  opacity: 50%;
+}
+
+section .clear-all-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+}

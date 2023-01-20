@@ -1,7 +1,7 @@
 class Obj {
   constructor(value) {
     this.inputValue = value;
-    this.index = 0;
+    this.index = null;
     this.completed = false;
   }
 }

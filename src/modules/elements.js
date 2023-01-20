@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import dltIcon from '../assets/icons/bin.png';
 
 const element = (obj) => {

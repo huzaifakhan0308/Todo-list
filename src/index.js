@@ -8,6 +8,9 @@ import Newlist from './modules/newList.js';
 const newList = new Newlist();
 const input = document.querySelector('.add-list-input');
 
+newList.array = JSON.parse(localStorage.getItem('todo-list'));
+newList.array.forEach((x) => Element(x));
+
 document.querySelector('ul').addEventListener('click', ((e) => {
   if (e.target.classList[0] === 'dltIcon') {
     newList.remove(e.target.parentElement.classList[0]);

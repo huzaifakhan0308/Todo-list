@@ -29,6 +29,12 @@ document.querySelector('ul').addEventListener('click', ((e) => {
       area.style.height = `${height}px`;
     }));
   });
+  const checkboxs = document.querySelectorAll('.checkbox');
+  checkboxs.forEach((x) => {
+    x.addEventListener('change', ((e) => {
+      newList.boolean(e.target);
+    }));
+  });
 }));
 
 document.querySelector('.add-newlist-icon').addEventListener('click', (() => {
@@ -37,4 +43,8 @@ document.querySelector('.add-newlist-icon').addEventListener('click', (() => {
     newList.add(obj);
     Element(obj);
   }
+}));
+
+document.querySelector('.clear-all-btn').addEventListener('click', (() => {
+  newList.clearAllCmpl();
 }));

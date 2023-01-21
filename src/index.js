@@ -1,14 +1,50 @@
 /* eslint-disable no-unused-vars */
 import './style.css';
+import './modules/icons.js';
 import Obj from './modules/obj.js';
+import Element from './modules/elements.js';
 import Newlist from './modules/newList.js';
-import variables from './modules/variables.js';
-import RefreshIcon from './assets/icons/refresh-ccw.svg';
-import ArrowIcon from './assets/icons/corner-down-left.svg';
 
-variables.RefreshIcon.src = RefreshIcon;
-variables.AddNewListIcon.src = ArrowIcon;
+const newList = new Newlist();
+const input = document.querySelector('.add-list-input');
+
+const todoList = JSON.parse(localStorage.getItem('todo-list'));
+
+if (todoList) {
+  newList.array = todoList;
+  newList.array.forEach((x) => Element(x));
+}
+
+document.querySelector('ul').addEventListener('click', ((e) => {
+  if (e.target.classList[0] === 'dltIcon') {
+    e.target.parentElement.remove();
+    newList.remove(e.target.parentElement.id);
+  }
+  const textArea = document.querySelectorAll('.childTextArea');
+  textArea.forEach((area) => {
+    area.addEventListener('keyup', ((e) => {
+      newList.editing(area);
+      area.style.height = '25px';
+      const height = e.target.scrollHeight;
+      area.style.height = `${height}px`;
+    }));
+  });
+  const checkboxs = document.querySelectorAll('.checkbox');
+  checkboxs.forEach((x) => {
+    x.addEventListener('change', ((e) => {
+      newList.boolean(e.target);
+    }));
+  });
+}));
+
 document.querySelector('.add-newlist-icon').addEventListener('click', (() => {
-  const newList = new Newlist();
-  newList.add(Obj);
+  if (input.value !== '') {
+    const obj = new Obj(input.value);
+    newList.add(obj);
+    Element(obj);
+  }
+}));
+
+document.querySelector('.clear-all-btn').addEventListener('click', (() => {
+  newList.clearAllCmpl();
 }));

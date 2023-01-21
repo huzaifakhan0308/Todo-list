@@ -45,7 +45,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-A GitHub | A code editor | A web browser
+GIT | A code editor | A web browser
 
 ### Setup
 

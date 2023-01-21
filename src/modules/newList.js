@@ -1,4 +1,4 @@
-let indexNumber = 0;
+let indexNumber = 1;
 
 class NewList {
   constructor() {
@@ -18,7 +18,23 @@ class NewList {
 
   remove(index) {
     const newArray = this.array.filter((x) => x.index !== parseInt(index, 10));
+    const li = document.querySelectorAll('li');
+    for (let i = 0; i < newArray.length; i += 1) {
+      let index = i;
+      index += 1;
+      newArray[i].index = index;
+      li[i].id = index;
+    }
     this.array = newArray;
+    localStorage.setItem('todo-list', JSON.stringify(this.array));
+  }
+
+  editing(textArea) {
+    for (let i = 0; i < this.array.length; i += 1) {
+      if (this.array[i].index === parseInt(textArea.parentElement.id, 10)) {
+        this.array[i].value = textArea.value;
+      }
+    }
     localStorage.setItem('todo-list', JSON.stringify(this.array));
   }
 }

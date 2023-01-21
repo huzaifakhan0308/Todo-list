@@ -1,6 +1,6 @@
 class Obj {
   constructor(value) {
-    this.inputValue = value;
+    this.value = value;
     this.index = null;
     this.completed = false;
   }

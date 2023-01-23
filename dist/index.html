@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <title>Todo-List</title>
 <script defer src="main.js"></script></head>
 
 <body>
@@ -12,13 +12,14 @@
     <section>
         <div class="header-div">
             <header>Today's To Do</header>
-            <div class="refresh"><img src="assets/icons/corner-down-left.svg" alt=""></div>
+            <div class="refresh"></div>
         </div>
         <form  action="">
-            <input class="add-list-input" type="text" placeholder="Add to your list...">
-            <div class="add-newlist-icon"><img src="./assets/icons/corner-down-left.svg" alt=""></div>
+            <input id="add-new-todo-input" class="add-list-input" type="text" placeholder="Add to your list...">
+            <div class="add-newlist-icon"></div>
         </form>
-        <ul></ul>
+        <ul>
+        </ul>
         <button class="clear-all-btn" type="button">Clear all completed</button>
     </section>
 </body>

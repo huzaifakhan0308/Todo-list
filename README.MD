@@ -35,7 +35,7 @@ HTML | SCSS | JS | ES6 | Webpack
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/huzaifakhan0308/Todo-list/tree/revert-4-function-clear-completed)
+- [Live Demo Link]()
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

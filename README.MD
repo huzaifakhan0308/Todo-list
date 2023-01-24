@@ -35,7 +35,7 @@ HTML | SCSS | JS | ES6 | Webpack
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://huzaifakhan0308.github.io/Todo-list/dist/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

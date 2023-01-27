@@ -10,7 +10,6 @@
     - [Setup](#setup)
     - [Usage](#usage)
   - [👥 Author ](#-author-)
-  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
@@ -30,6 +29,7 @@ HTML | SCSS | JS | ES6 | Webpack
 - **Display the tasks**
 - **Can add and delete tasks**
 - **Stores data in local storage**
+- **Write tests using Jest**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,14 +65,10 @@ To run the project, open index.html with your preferred web browser or open it w
 - LinkedIn: [@javierjhm](https://www.linkedin.com/feed/)
 - Instagram: [@digijavi](https://www.instagram.com/huzaifakhan031252/)
 
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[Browser data storage]**
-- [ ] **[New live view]**
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Feel free to check [issues page]().
+Feel free to check [issues page](https://github.com/huzaifakhan0308/Todo-list/issues).
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 

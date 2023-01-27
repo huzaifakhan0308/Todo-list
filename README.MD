@@ -65,6 +65,14 @@ To run the project, open index.html with your preferred web browser or open it w
 - LinkedIn: [@javierjhm](https://www.linkedin.com/feed/)
 - Instagram: [@digijavi](https://www.instagram.com/huzaifakhan031252/)
 
+
+👤 **Henry Ikemefuna Ugwu**
+
+- GitHub: https://github.com/henry-dura
+- Twitter: https://twitter.com/henryikemefuna
+- LinkedIn: https://www.linkedin.com/in/henry-ikemefuna-ugwu-3a2613100/
+
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Browser data storage]**

@@ -14,9 +14,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Todo-list <a name="about-project"></a>
+# 📖 Testing To Do list: part 2 <a name="about-project"></a>
 
-**Todo List**, in this project, i create simple todo-list using webpack.
+**Testing To Do list: part 2**, in this project, I tested the functions editing,updating and clearing all completed tasks using Jest.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -90,6 +90,6 @@ Thanks Microverse, learn how to code > [Join Microverse](https://www.microverse.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

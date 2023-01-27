@@ -66,6 +66,19 @@ To run the project, open index.html with your preferred web browser or open it w
 - Instagram: [@digijavi](https://www.instagram.com/huzaifakhan031252/)
 
 
+👤 **Henry Ikemefuna Ugwu**
+
+- GitHub: https://github.com/henry-dura
+- Twitter: https://twitter.com/henryikemefuna
+- LinkedIn: https://www.linkedin.com/in/henry-ikemefuna-ugwu-3a2613100/
+
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Browser data storage]**
+- [ ] **[New live view]**
+
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Feel free to check [issues page](https://github.com/huzaifakhan0308/Todo-list/issues).

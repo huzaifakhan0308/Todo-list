@@ -1,32 +1,24 @@
-import { updateLocalStorage, getLocalStorage } from './localStorage.js';
-
-const jsdom = require('jsdom');
-
-// const { JSDOM } = jsdom;
-
 let indexNumber = 1;
 
-class NewList {
+export default class NewList {
   constructor() {
     this.array = [];
   }
 
   add(obj) {
+    const getItem = JSON.parse(localStorage.getItem('toDoList'));
     if (this.array.length > 0) {
-      const getItem = getLocalStorage();
       indexNumber = getItem[getItem.length - 1].index;
       indexNumber += 1;
     }
     obj.index = indexNumber;
     this.array.push(obj);
-    updateLocalStorage(this.array);
+    localStorage.setItem('toDoList', JSON.stringify(this.array));
     return this.array;
   }
 
   remove(index) {
     const newArray = this.array.filter((x) => x.index !== parseInt(index, 10));
-    // const dom = new JSDOM();
-    // const a = dom.window.document.querySelectorAll('li');
     const li = document.querySelectorAll('li');
     for (let i = 0; i < newArray.length; i += 1) {
       let index = i;
@@ -36,6 +28,7 @@ class NewList {
     }
     this.array = newArray;
     localStorage.setItem('todo-list', JSON.stringify(this.array));
+    return this.array;
   }
 
   editing(textArea) {
@@ -83,5 +76,3 @@ class NewList {
     localStorage.setItem('todo-list', JSON.stringify(this.array));
   }
 }
-
-export default NewList;

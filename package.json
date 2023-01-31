@@ -48,5 +48,5 @@
   "main": "webpack.config.js",
   "jest":{
     "testEnvironment": "jsdom"
-}
+  }
 }

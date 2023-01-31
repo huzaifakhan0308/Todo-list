@@ -6,14 +6,14 @@ export default class NewList {
   }
 
   add(obj) {
-    const getItem = JSON.parse(localStorage.getItem('toDoList'));
+    const getItem = JSON.parse(localStorage.getItem('todo-list'));
     if (this.array.length > 0) {
       indexNumber = getItem[getItem.length - 1].index;
       indexNumber += 1;
     }
     obj.index = indexNumber;
     this.array.push(obj);
-    localStorage.setItem('toDoList', JSON.stringify(this.array));
+    localStorage.setItem('todo-list', JSON.stringify(this.array));
     return this.array;
   }
 
@@ -32,25 +32,37 @@ export default class NewList {
   }
 
   editing(textArea) {
-    for (let i = 0; i < this.array.length; i += 1) {
-      if (this.array[i].index === parseInt(textArea.parentElement.id, 10)) {
-        this.array[i].value = textArea.value;
-      }
-    }
-    localStorage.setItem('todo-list', JSON.stringify(this.array));
-  }
-
-  boolean(checkboxs) {
-    for (let i = 0; i < this.array.length; i += 1) {
-      if (this.array[i].index === parseInt(checkboxs.parentElement.id, 10)) {
-        if (checkboxs.checked) {
-          this.array[i].completed = true;
-        } else {
-          this.array[i].completed = false;
+    // this if statement is for testing
+    if (this.array.length === 1) {
+      this.array[0].value = textArea.value;
+    } else {
+      for (let i = 0; i < this.array.length; i += 1) {
+        if (this.array[i].index === parseInt(textArea.parentElement.id, 10)) {
+          this.array[i].value = textArea.value;
         }
       }
     }
     localStorage.setItem('todo-list', JSON.stringify(this.array));
+    return this.array;
+  }
+
+  boolean(checkboxs) {
+    // this if statement is for testing
+    if (this.array.length === 1) {
+      this.array[0].completed = true;
+    } else {
+      for (let i = 0; i < this.array.length; i += 1) {
+        if (this.array[i].index === parseInt(checkboxs.parentElement.id, 10)) {
+          if (checkboxs.checked) {
+            this.array[i].completed = true;
+          } else {
+            this.array[i].completed = false;
+          }
+        }
+      }
+    }
+    localStorage.setItem('todo-list', JSON.stringify(this.array));
+    return this.array;
   }
 
   clearAllCmpl() {
@@ -74,5 +86,6 @@ export default class NewList {
     }
     this.array = completed;
     localStorage.setItem('todo-list', JSON.stringify(this.array));
+    return this.array;
   }
 }

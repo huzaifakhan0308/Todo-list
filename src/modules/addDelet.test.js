@@ -1,4 +1,4 @@
-import NewList from './modules/newList.js';
+import NewList from './newList.js';
 
 class LocalStorageMock {
   constructor() {
@@ -28,7 +28,7 @@ const obj1 = { value: 'hello', completed: false, index: null };
 
 const functions = new NewList();
 
-describe('functionality methods', () => {
+describe('add and remove function', () => {
   it('Add new task', () => {
     expect(functions.add(obj1)).toStrictEqual([{ value: 'hello', completed: false, index: 1 }]);
   });

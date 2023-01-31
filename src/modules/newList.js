@@ -6,8 +6,8 @@ export default class NewList {
   }
 
   add(obj) {
-    const getItem = JSON.parse(localStorage.getItem('todo-list'));
     if (this.array.length > 0) {
+      const getItem = JSON.parse(localStorage.getItem('todo-list'));
       indexNumber = getItem[getItem.length - 1].index;
       indexNumber += 1;
     }

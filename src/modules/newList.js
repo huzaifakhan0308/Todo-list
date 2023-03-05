@@ -49,11 +49,11 @@ export default class NewList {
   boolean(checkboxs) {
     // this if statement is for testing
     if (this.array.length === 1) {
-        if (checkboxs.checked) {
-          this.array[0].completed = true;
-        } else {
-          this.array[0].completed = false;
-        }
+      if (checkboxs.checked) {
+        this.array[0].completed = false;
+      } else {
+        this.array[0].completed = true;
+      }
     } else {
       for (let i = 0; i < this.array.length; i += 1) {
         if (this.array[i].index === parseInt(checkboxs.parentElement.id, 10)) {

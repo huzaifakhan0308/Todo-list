@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">58.06% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>36/60</span>
+                <span class='fraction'>36/62</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">21.42% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/14</span>
+                <span class='fraction'>4/16</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.49% </span>
+                <span class="strong">56.36% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>31/53</span>
+                <span class='fraction'>31/55</span>
             </div>
         
             
@@ -153,7 +153,12 @@
 <a name='L88'></a><a href='#L88'>88</a>
 <a name='L89'></a><a href='#L89'>89</a>
 <a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,14 +167,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -205,6 +210,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -242,6 +251,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">let indexNumber = 1;
 &nbsp;
@@ -251,8 +261,8 @@ export default class NewList {
   }
 &nbsp;
   add(obj) {
-    const getItem = JSON.parse(localStorage.getItem('todo-list'));
     <span class="missing-if-branch" title="if path not taken" >I</span>if (this.array.length &gt; 0) {
+      const getItem = <span class="cstat-no" title="statement not covered" >JSON.parse(localStorage.getItem('todo-list'));</span>
 <span class="cstat-no" title="statement not covered" >      indexNumber = getItem[getItem.length - 1].index;</span>
 <span class="cstat-no" title="statement not covered" >      indexNumber += 1;</span>
     }
@@ -294,7 +304,11 @@ export default class NewList {
   boolean(checkboxs) {
     // this if statement is for testing
     if (this.array.length === 1) {
-      this.array[0].completed = true;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (checkboxs.checked) {
+<span class="cstat-no" title="statement not covered" >        this.array[0].completed = false;</span>
+      } else {
+        this.array[0].completed = true;
+      }
     } else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >      for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; this.array.length; i += 1) {</span>
 <span class="cstat-no" title="statement not covered" >        if (this.array[i].index === parseInt(checkboxs.parentElement.id, 10)) {</span>
@@ -333,14 +347,15 @@ export default class NewList {
     localStorage.setItem('todo-list', JSON.stringify(this.array));
     return this.array;
   }
-}</pre></td></tr></table></pre>
+}
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-27T22:16:48.884Z
+                at 2023-03-05T19:17:49.937Z
             </div>
         <script src="prettify.js"></script>
         <script>

@@ -17,6 +17,16 @@ body {
   justify-content: center;
 }
 
+.project-header-div {
+  top: 5vh;
+  position: absolute;
+}
+
+.project-header-line2 {
+  font-size: larger;
+  font-weight: bolder;
+}
+
 section {
   display: flex;
   justify-content: center;

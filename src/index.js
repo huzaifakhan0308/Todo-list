@@ -42,6 +42,7 @@ document.querySelector('.add-newlist-icon').addEventListener('click', (() => {
     const obj = new Obj(input.value);
     newList.add(obj);
     Element(obj);
+    input.value = '';
   }
 }));
 

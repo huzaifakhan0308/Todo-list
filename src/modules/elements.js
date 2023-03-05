@@ -6,7 +6,10 @@ const element = (obj) => {
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
   checkbox.classList = 'checkbox';
-  checkbox.checked = obj.completed
+  checkbox.checked = obj.completed;
+  const textArea = document.createElement('textarea');
+  textArea.classList = 'childTextArea';
+  textArea.value = `${obj.value}`;
   checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
       textArea.classList.add('completed');
@@ -14,10 +17,7 @@ const element = (obj) => {
       textArea.classList.remove('completed');
     }
   });
-  const textArea = document.createElement('textarea');
-  textArea.classList = 'childTextArea';
-  textArea.value = `${obj.value}`;
-  if(obj.completed) {
+  if (obj.completed) {
     textArea.classList.add('completed');
   }
   const img = document.createElement('img');

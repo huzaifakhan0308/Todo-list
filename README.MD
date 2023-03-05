@@ -26,8 +26,7 @@ HTML | SCSS | JS | ES6 | Webpack
 
 ### Key Features <a name="key-features"></a>
 
-- **Display the tasks**
-- **Can add and delete tasks**
+- **Can add delete and edit tasks**
 - **Stores data in local storage**
 - **Write tests using Jest**
 

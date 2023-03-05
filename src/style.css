@@ -97,6 +97,10 @@ section .clear-all-btn {
   cursor: pointer;
 }
 
+section .clear-all-btn:hover {
+  background-color: rgba(59, 59, 59, 0.211);
+}
+
 section .clear-all-btn:active {
   background-color: rgba(0, 0, 0, 0.211);
 }

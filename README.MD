@@ -60,17 +60,11 @@ To run the project, open index.html with your preferred web browser or open it w
 
 👤 **Huzaifa khan**
 
-- GitHub: [@wickathou](https://github.com/huzaifakhan0308)
-- LinkedIn: [@javierjhm](https://www.linkedin.com/feed/)
-- Instagram: [@digijavi](https://www.instagram.com/huzaifakhan031252/)
+- GitHub: [@huzaifakhan0308](https://github.com/huzaifakhan0308)
+- Twitter: [@huzaifakhan0308](https://twitter.com/home?lang=en)
+- LinkedIn: [huzaifa khan](https://www.linkedin.com/in/huzaifa-khan-938140256/)
 
-
-👤 **Henry Ikemefuna Ugwu**
-
-- GitHub: https://github.com/henry-dura
-- Twitter: https://twitter.com/henryikemefuna
-- LinkedIn: https://www.linkedin.com/in/henry-ikemefuna-ugwu-3a2613100/
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 

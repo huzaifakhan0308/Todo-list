@@ -8,27 +8,33 @@
 </head>
 
 <body>
-    <div class="project-header-div">
+    <header class="project-header">
         <h1 class="project-header-line1">
             Simple Todo App
         </h1>
-        <h1 class="project-header-line2">
+        <h2 class="project-header-line2">
             You can Add,Delete,Edit and Clear all completed the todo items.
-        </h1>
-    </div>
+        </h2>
+    </header>
     <section>
         <div class="header-div">
-            <header>Today's To Do</header>
+            <h3>Today's To Do</h3>
             <div class="refresh"></div>
         </div>
-        <form  action="">
+        <form action="/submit-form">
             <input id="add-new-todo-input" class="add-list-input" type="text" placeholder="Add to your list...">
-            <div class="add-newlist-icon"></div>
+            <button type="button">
+                <div class="add-newlist-icon"></div>
+            </button>
         </form>
         <ul>
+            <!-- This ul tag is for todo list <li></li> tags-->
         </ul>
         <button class="clear-all-btn" type="button">Clear all completed</button>
     </section>
+    <footer>
+        © 2023 SimpleTodoApp. All rights reserved. This website is provided for informational purposes only. Use at your own risk.
+    </footer>
 </body>
 
 </html>

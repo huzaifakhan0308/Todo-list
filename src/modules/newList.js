@@ -1,3 +1,5 @@
+import { getItem, setItem } from './localstorage.js';
+
 let indexNumber = 1;
 
 export default class NewList {
@@ -7,13 +9,13 @@ export default class NewList {
 
   add(obj) {
     if (this.array.length > 0) {
-      const getItem = JSON.parse(localStorage.getItem('todo-list'));
-      indexNumber = getItem[getItem.length - 1].index;
+      const getItems = getItem();
+      indexNumber = getItems[getItems.length - 1].index;
       indexNumber += 1;
     }
     obj.index = indexNumber;
     this.array.push(obj);
-    localStorage.setItem('todo-list', JSON.stringify(this.array));
+    setItem(this.array);
     return this.array;
   }
 
@@ -27,12 +29,12 @@ export default class NewList {
       li[i].id = index;
     }
     this.array = newArray;
-    localStorage.setItem('todo-list', JSON.stringify(this.array));
+    setItem(this.array);
     return this.array;
   }
 
   editing(textArea) {
-    // this if statement is for testing
+    // this if statement is only for testing
     if (this.array.length === 1) {
       this.array[0].value = textArea.value;
     } else {
@@ -42,22 +44,22 @@ export default class NewList {
         }
       }
     }
-    localStorage.setItem('todo-list', JSON.stringify(this.array));
+    setItem(this.array);
     return this.array;
   }
 
-  boolean(checkboxs) {
-    // this if statement is for testing
+  boolean(checkbox) {
+    // this if statement is only for testing
     if (this.array.length === 1) {
-      if (checkboxs.checked) {
-        this.array[0].completed = false;
-      } else {
+      if (checkbox.checked) {
         this.array[0].completed = true;
+      } else {
+        this.array[0].completed = false;
       }
     } else {
       for (let i = 0; i < this.array.length; i += 1) {
-        if (this.array[i].index === parseInt(checkboxs.parentElement.id, 10)) {
-          if (checkboxs.checked) {
+        if (this.array[i].index === parseInt(checkbox.parentElement.id, 10)) {
+          if (checkbox.checked) {
             this.array[i].completed = true;
           } else {
             this.array[i].completed = false;
@@ -65,7 +67,7 @@ export default class NewList {
         }
       }
     }
-    localStorage.setItem('todo-list', JSON.stringify(this.array));
+    setItem(this.array);
     return this.array;
   }
 
@@ -76,8 +78,8 @@ export default class NewList {
       index += 1;
       completed[i].index = index;
     }
-    const checkboxs = document.querySelectorAll('.checkbox');
-    checkboxs.forEach((x) => {
+    const checkboxes = document.querySelectorAll('.checkbox');
+    checkboxes.forEach((x) => {
       if (x.checked) {
         x.parentElement.remove();
       }
@@ -89,7 +91,7 @@ export default class NewList {
       li[i].id = index;
     }
     this.array = completed;
-    localStorage.setItem('todo-list', JSON.stringify(this.array));
+    setItem(this.array);
     return this.array;
   }
 }

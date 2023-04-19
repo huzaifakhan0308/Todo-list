@@ -1,14 +1,14 @@
-/* eslint-disable no-unused-vars */
 import './style.css';
 import './modules/icons.js';
 import Obj from './modules/obj.js';
 import Element from './modules/elements.js';
 import Newlist from './modules/newList.js';
+import { getItem } from './modules/localstorage.js';
 
 const newList = new Newlist();
 const input = document.querySelector('.add-list-input');
 
-const todoList = JSON.parse(localStorage.getItem('todo-list'));
+const todoList = getItem();
 
 if (todoList) {
   newList.array = todoList;
@@ -20,8 +20,7 @@ document.querySelector('ul').addEventListener('click', ((e) => {
     e.target.parentElement.remove();
     newList.remove(e.target.parentElement.id);
   }
-  const textArea = document.querySelectorAll('.childTextArea');
-  textArea.forEach((area) => {
+  document.querySelectorAll('.childTextArea').forEach((area) => {
     area.addEventListener('keyup', ((e) => {
       newList.editing(area);
       area.style.height = '25px';
@@ -29,8 +28,8 @@ document.querySelector('ul').addEventListener('click', ((e) => {
       area.style.height = `${height}px`;
     }));
   });
-  const checkboxs = document.querySelectorAll('.checkbox');
-  checkboxs.forEach((x) => {
+  const checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach((x) => {
     x.addEventListener('change', ((e) => {
       newList.boolean(e.target);
     }));

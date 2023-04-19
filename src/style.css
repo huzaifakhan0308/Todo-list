@@ -14,17 +14,19 @@ img {
 
 body {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.project-header-div {
-  top: 5vh;
-  position: absolute;
+.project-header {
+  margin-top: 5vh;
+  padding: 10px;
 }
 
 .project-header-line2 {
-  font-size: larger;
   font-weight: bolder;
+  font-size: medium;
 }
 
 section {
@@ -33,8 +35,8 @@ section {
   align-items: center;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 70vh;
-  margin-top: 20vh;
+  width: 80%;
+  margin-top: 5vh;
 }
 
 section .header-div {
@@ -45,8 +47,9 @@ section .header-div {
   width: 100%;
 }
 
-section .header-div header {
+section .header-div h3 {
   padding: 15px;
+  font-weight: lighter;
 }
 
 section div .refresh {
@@ -73,6 +76,11 @@ section form .add-list-input {
   width: 98%;
   outline: none;
   padding: 15px 10px 15px 10px;
+}
+
+section form button {
+  background-color: rgba(254, 254, 254, 0);
+  border: none;
 }
 
 section form .add-newlist-icon {
@@ -103,6 +111,15 @@ section .clear-all-btn:hover {
 
 section .clear-all-btn:active {
   background-color: rgba(0, 0, 0, 0.211);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  border: 1px solid black;
+  width: 95%;
+  margin-bottom: 2px;
+  padding: 5px;
 }
 
 /* js classes */
@@ -152,4 +169,31 @@ li {
 
 .dltIcon:hover {
   opacity: 100%;
+}
+
+@media (min-width: 620px) {
+  .project-header {
+    margin-top: 5vh;
+    padding: 10px;
+  }
+
+  .project-header-line2 {
+    font-size: larger;
+    font-weight: bolder;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 70vh;
+    margin-top: 10vh;
+  }
+
+  footer {
+    margin-bottom: 1vh;
+    width: 97%;
+  }
 }

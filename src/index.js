@@ -1,28 +1,26 @@
 import './style.css';
-import './modules/icons.js';
-import Obj from './modules/obj.js';
+import './modules/importAssets.js';
+import Obj from './modules/newValue.js';
 import Element from './modules/elements.js';
-import Newlist from './modules/newList.js';
+import Methods from './modules/methods.js';
 import { getItem } from './modules/localstorage.js';
 
-const newList = new Newlist();
-const input = document.querySelector('.add-list-input');
-
+const methods = new Methods();
 const todoList = getItem();
 
 if (todoList) {
-  newList.array = todoList;
-  newList.array.forEach((x) => Element(x));
+  methods.array = todoList;
+  methods.array.forEach((x) => Element(x));
 }
 
 document.querySelector('ul').addEventListener('click', ((e) => {
   if (e.target.classList[0] === 'dltIcon') {
     e.target.parentElement.remove();
-    newList.remove(e.target.parentElement.id);
+    methods.remove(e.target.parentElement.id);
   }
   document.querySelectorAll('.childTextArea').forEach((area) => {
     area.addEventListener('keyup', ((e) => {
-      newList.editing(area);
+      methods.editing(area);
       area.style.height = '25px';
       const height = e.target.scrollHeight;
       area.style.height = `${height}px`;
@@ -31,20 +29,22 @@ document.querySelector('ul').addEventListener('click', ((e) => {
   const checkboxes = document.querySelectorAll('.checkbox');
   checkboxes.forEach((x) => {
     x.addEventListener('change', ((e) => {
-      newList.boolean(e.target);
+      methods.boolean(e.target);
     }));
   });
 }));
 
-document.querySelector('.add-newlist-icon').addEventListener('click', (() => {
+const input = document.querySelector('.add-list-input');
+
+document.querySelector('.add-new-todo').addEventListener('click', (() => {
   if (input.value !== '') {
     const obj = new Obj(input.value);
-    newList.add(obj);
+    methods.add(obj);
     Element(obj);
     input.value = '';
   }
 }));
 
 document.querySelector('.clear-all-btn').addEventListener('click', (() => {
-  newList.clearAllCmpl();
+  methods.clearAllCmpl();
 }));

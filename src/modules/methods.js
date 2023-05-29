@@ -2,7 +2,7 @@ import { getItem, setItem } from './localstorage.js';
 
 let indexNumber = 1;
 
-export default class NewList {
+export default class Methods {
   constructor() {
     this.array = [];
   }

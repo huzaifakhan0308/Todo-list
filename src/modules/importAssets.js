@@ -6,4 +6,4 @@ refreshIcon.src = RefreshIcon;
 document.querySelector('.refresh').append(refreshIcon);
 const addNewListIcon = new Image();
 addNewListIcon.src = ArrowIcon;
-document.querySelector('.add-newlist-icon').append(addNewListIcon);
+document.querySelector('.add-new-todo').append(addNewListIcon);

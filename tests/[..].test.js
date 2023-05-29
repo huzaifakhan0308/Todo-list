@@ -1,4 +1,4 @@
-import Newlist from './newList.js';
+import Methods from '../src/modules/methods.js';
 
 const task = {
   value: 'editing',
@@ -6,7 +6,7 @@ const task = {
   index: null,
 };
 
-const functions = new Newlist();
+const functions = new Methods();
 
 describe('Edit task', () => {
   functions.add(task);

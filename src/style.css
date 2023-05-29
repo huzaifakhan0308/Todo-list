@@ -83,7 +83,7 @@ section form button {
   border: none;
 }
 
-section form .add-newlist-icon {
+section form button .add-new-todo {
   display: flex;
   justify-content: center;
   align-items: center;

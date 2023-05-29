@@ -1,4 +1,4 @@
-import NewList from './newList.js';
+import Methods from '../src/modules/methods.js';
 
 class LocalStorageMock {
   constructor() {
@@ -26,7 +26,7 @@ global.localStorage = new LocalStorageMock();
 
 const obj1 = { value: 'hello', completed: false, index: null };
 
-const functions = new NewList();
+const functions = new Methods();
 
 describe('add and remove function', () => {
   it('Add new task', () => {

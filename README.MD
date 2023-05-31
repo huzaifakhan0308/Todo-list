@@ -20,7 +20,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 To Do list <a name="about-project"></a>
+# 📖 To-do  <a name="about-project"></a>
 
 > In this project I create a Todo App, you can add remove edit and delete at once all completed todos
 

@@ -34,14 +34,9 @@ export default class Methods {
   }
 
   editing(textArea) {
-    // this if statement is only for testing
-    if (this.array.length === 1) {
-      this.array[0].value = textArea.value;
-    } else {
-      for (let i = 0; i < this.array.length; i += 1) {
-        if (this.array[i].index === parseInt(textArea.parentElement.id, 10)) {
-          this.array[i].value = textArea.value;
-        }
+    for (let i = 0; i < this.array.length; i += 1) {
+      if (this.array[i].index === parseInt(textArea.parentElement.id, 10)) {
+        this.array[i].value = textArea.value;
       }
     }
     setItem(this.array);
@@ -49,21 +44,12 @@ export default class Methods {
   }
 
   boolean(checkbox) {
-    // this if statement is only for testing
-    if (this.array.length === 1) {
-      if (checkbox.checked) {
-        this.array[0].completed = true;
-      } else {
-        this.array[0].completed = false;
-      }
-    } else {
-      for (let i = 0; i < this.array.length; i += 1) {
-        if (this.array[i].index === parseInt(checkbox.parentElement.id, 10)) {
-          if (checkbox.checked) {
-            this.array[i].completed = true;
-          } else {
-            this.array[i].completed = false;
-          }
+    for (let i = 0; i < this.array.length; i += 1) {
+      if (this.array[i].index === parseInt(checkbox.parentElement.id, 10)) {
+        if (checkbox.checked) {
+          this.array[i].completed = true;
+        } else {
+          this.array[i].completed = false;
         }
       }
     }
